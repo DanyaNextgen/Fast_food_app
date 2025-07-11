@@ -1,6 +1,5 @@
-import { create } from 'zustand'
+import {create} from 'zustand'
 import {User} from "@/type";
-import {findNativeTargetByName} from "@expo/config-plugins/build/ios/Target";
 import {getCurrentUser} from "@/lib/appwrite";
 
 type AuthState = {
@@ -24,7 +23,7 @@ const useAuthStore = create<AuthState>((set) => ({
         set({isLoading: true})
         try {
             const user = await getCurrentUser()
-            if(user) {
+            if (user) {
                 set({isAuthenticated: true, user: user as User})
             } else {
                 set({isAuthenticated: false, user: null})
