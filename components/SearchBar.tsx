@@ -16,7 +16,7 @@ const SearchBar = () => {
     }
 
     const handleSubmit = () => {
-        if(query.trim()) {
+        if(query?.trim()) {
             router.setParams({query})
         }
     }
