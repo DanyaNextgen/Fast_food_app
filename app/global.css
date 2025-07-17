@@ -26,7 +26,7 @@
     }
 
     .cart-item {
-        @apply flex flex-row items-end justfy-between mb-4 bg-white rounded-xl p-3 shadow-md shadow-dark-100/10;
+        @apply flex flex-row items-end justify-between mb-4 bg-white rounded-xl p-3 shadow-md shadow-dark-100/10;
     }
 
     .cart-item__image {
@@ -54,11 +54,11 @@
     }
 
     .filter {
-        @apply px-6 py-3 rounded-full mr-2 shadow-sm shadow-black/10
+        @apply px-6 py-3 rounded-full mr-2 shadow-sm shadow-black/10;
     }
 
     .menu-card {
-        @apply relative py-9 px-3.5 pt-24 flex items-center justify-end bg-white shadow-md shadow-black/10 rounded-e-3xl;
+        @apply relative py-9 px-3.5 pt-24 flex items-center justify-end bg-white shadow-md shadow-black/10 rounded-3xl;
     }
 
     .profile-field {
@@ -70,11 +70,11 @@
     }
 
     .searchbar {
-        @apply relative flex flex-row items-center justify-center w-full bg-white shadow-md shadow-black-10 rounded-full font-quicksand-medium text-dark-100 gap-5;
+        @apply relative flex flex-row items-center justify-center w-full bg-white shadow-md shadow-black/10 rounded-full  font-quicksand-medium text-dark-100 gap-5;
     }
 
     .tab-icon {
-        @apply flex min-w-20 items-centerjustify-center min-h-full gap-1 mt-12;
+        @apply flex min-w-20 items-center justify-center min-h-full gap-1 mt-12;
     }
 
     .offer-card {

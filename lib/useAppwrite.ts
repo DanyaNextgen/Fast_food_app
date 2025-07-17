@@ -14,11 +14,7 @@ interface UseAppwriteReturn<T, P> {
     refetch: (newParams?: P) => Promise<void>;
 }
 
-const useAppwrite = <T, P extends Record<string, string | number>>({
-                                                                       fn,
-                                                                       params = {} as P,
-                                                                       skip = false,
-                                                                   }: UseAppwriteOptions<T, P>): UseAppwriteReturn<T, P> => {
+const useAppwrite = <T, P extends Record<string, string | number>>({fn, params = {} as P, skip = false,}: UseAppwriteOptions<T, P>): UseAppwriteReturn<T, P> => {
     const [data, setData] = useState<T | null>(null);
     const [loading, setLoading] = useState(!skip);
     const [error, setError] = useState<string | null>(null);
@@ -45,7 +41,7 @@ const useAppwrite = <T, P extends Record<string, string | number>>({
 
     useEffect(() => {
         if (!skip) {
-            fetchData(params);
+            void fetchData(params);
         }
     }, []);
 

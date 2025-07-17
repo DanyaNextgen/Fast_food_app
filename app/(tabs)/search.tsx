@@ -30,7 +30,7 @@ const Search = () => {
                     const isFirstRightColItem = index % 2 == 0
 
                     return (
-                        <View className={cn("flex-1 max-w-[48]", !isFirstRightColItem ? "mt-10" : "mt-0")}>
+                        <View className={cn("flex-1 max-w-[48%]", !isFirstRightColItem ? "mt-10" : "mt-0")}>
                             <MenuCard item={item as MenuItem} />
                         </View>
                     )
@@ -54,14 +54,11 @@ const Search = () => {
 
                         <SearchBar />
 
-                        <Filter categories={categories!}/>
+                        <Filter categories={categories!} />
                     </View>
                 )}
                 ListEmptyComponent={() => !loading && <Text>No results</Text>}
             />
-
-            <Button title="Seed"
-                    onPress={() => seed().catch((error) => console.log("Failed to seed the database", error))}/>
         </SafeAreaView>
     )
 }
